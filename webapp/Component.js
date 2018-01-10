@@ -1,8 +1,8 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/model/json/JSONModel",
-	"sap/ui/demo/wt/controller/HelloDialog"
-], function (UIComponent, JSONModel, HelloDialog) {
+	"sap/ui/demo/wt/controller/CustCreate"
+], function (UIComponent, JSONModel, CustCreate) {
 	"use strict";
 
 	return UIComponent.extend("sap.ui.demo.wt.Component", {
@@ -25,11 +25,15 @@ sap.ui.define([
 			this.setModel(oModel);
 
 			// set dialog
-			this._helloDialog = new HelloDialog(this.getRootControl());
+			this._CustCreate = new CustCreate(this.getRootControl());
 		},
 
-		openHelloDialog : function () {
-			this._helloDialog.open();
+		// openHelloDialog : function () {
+		// 	this._helloDialog.open();
+		// },
+		
+		openCustCreate : function () {
+			this._CustCreate.open();
 		}
 	});
 

@@ -3,7 +3,7 @@ sap.ui.define([
 ], function (UI5Object) {
 	"use strict";
 
-	return UI5Object.extend("sap.ui.demo.wt.controller.HelloDialog", {
+	return UI5Object.extend("sap.ui.demo.wt.controller.CustCreate", {
 
 		constructor : function (oView) {
 			this._oView = oView;
@@ -11,7 +11,7 @@ sap.ui.define([
 
 		open : function () {
 			var oView = this._oView;
-			var oDialog = oView.byId("helloDialog");
+			var oDialog = oView.byId("CustCreate");
 
 			// create dialog lazily
 			if (!oDialog) {
@@ -21,7 +21,7 @@ sap.ui.define([
 					}
 				};
 				// create dialog via fragment factory
-				oDialog = sap.ui.xmlfragment(oView.getId(), "sap.ui.demo.wt.view.HelloDialog", oFragmentController);
+				oDialog = sap.ui.xmlfragment(oView.getId(), "sap.ui.demo.wt.view.CustCreate", oFragmentController);
 				// connect dialog to the root view of this component (models, lifecycle)
 				oView.addDependent(oDialog);
 			}
